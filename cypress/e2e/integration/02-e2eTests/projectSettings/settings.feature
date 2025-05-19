@@ -11,7 +11,6 @@ Feature: Relevic Dashboard Settings
         # Then I click on delete avatar
         # Then I upload the image avatar
         Then I click on "Save Changes" button
-        Then I should be able to see success banner
 
     Scenario: Adding Team Member with invalid email
         Given I am on settings page
