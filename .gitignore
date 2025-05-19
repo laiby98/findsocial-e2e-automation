@@ -1,0 +1,9 @@
+# Dependency directories
+/package-lock.json
+/node_modules
+
+# Cypress Screenshots
+/cypress/screenshots
+
+#Others
+.DS_Store

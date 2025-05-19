@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "@cypress/webpack-preprocessor": "^6.0.1",
+    "@webpack-cli/generators": "^3.0.7",
+    "cypress": "^13.6.4",
+    "cypress-drag-drop": "^1.1.1",
+    "cypress-file-upload": "^5.0.8",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@cypress/browserify-preprocessor": "latest"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/stepDefinitions/**/*.js",
+    "filterSpecs": true,
+    "omitFiltered": true
+  },
+  "scripts": {
+    "script": "cypress run --browser chrome",
+    "test": "npm run script "
+  }
+}
