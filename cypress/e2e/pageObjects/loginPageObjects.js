@@ -9,7 +9,7 @@ const googleSSOButton = "button[class='chakra-button css-14iurws']";
 
 class LoginPage {
   visit() {
-    cy.visit(dashboard);
+    cy.visit(login);
   }
   /*getTitle() {
     return cy.title();
