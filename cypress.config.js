@@ -16,7 +16,7 @@ module.exports = defineConfig({
   e2e: {
     specPattern: "cypress/e2e/integration/**/*.feature",
     setupNodeEvents,
-    baseUrl: "https://dashboard.relevic.com/",
+    baseUrl: "https://www.findsocial.io/",
     chromeWebSecurity: false,
     experimentalModifyObstructiveThirdPartyCode: true,
     defaultCommandTimeout: 10000,
