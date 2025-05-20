@@ -8,8 +8,9 @@ const validPass = Cypress.env("password");
 const loginPage = new LoginPage();
 
 Given ("I am on Login page", () => {
-  loginPage.visit();
+  loginPage.visit(dashboard);
 });
+
 
 /*Then("Title on the page says {string}", () => {
   loginPage.getTitle().should("include", "Relevic");
