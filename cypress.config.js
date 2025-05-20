@@ -27,10 +27,6 @@ module.exports = defineConfig({
     env: {
       username: "QA Automation Cypress",
       email: "qa+3@relevic.com",
-      password: "Relevic@1",
-      validCreditCardNo: "4242424242424242",
-      validCvc: "123",
-      validExpiryDate: "0128", //MM/YY format
     },
   },
 });

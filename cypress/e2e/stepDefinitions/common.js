@@ -1,5 +1,3 @@
-///<reference types="Cypress" />
-
 import { Before } from "@badeball/cypress-cucumber-preprocessor";
 
 Before({ tags: "@LoginAsAdmin" }, () => {

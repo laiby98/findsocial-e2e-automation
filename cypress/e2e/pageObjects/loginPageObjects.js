@@ -1,5 +1,3 @@
-/// <reference types="Cypress" />
-
 const login = "/";
 const emailPlaceholder = '[id="email"]';
 const passwordPlaceholder = '[id="password"]';
@@ -13,29 +11,6 @@ class LoginPage {
   }
   getTitle() {
     return cy.title();
-  }
-
-  emailPlaceholder() {
-    return cy.get(emailPlaceholder);
-  }
-
-  passwordPlaceholder() {
-    return cy.get(passwordPlaceholder);
-  }
-
-  loginButton() {
-    return cy.get(loginBtn);
-  }
-
-  errorMessage() {
-    return cy.get(errorMessage);
-  }
-  getUrl() {
-    return cy.url();
-  }
-
-  googleSSOButton() {
-    return cy.get(googleSSOButton);
   }
 }
 export { LoginPage };
