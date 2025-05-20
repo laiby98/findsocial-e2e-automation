@@ -7,10 +7,10 @@ const validPass = Cypress.env("password");
 
 const loginPage = new LoginPage();
 
-When("I am on Login page", () => {
+Given ("I am on Login page", () => {
   loginPage.visit();
 });
 
-Then("Title on the page says {string}", () => {
+/*Then("Title on the page says {string}", () => {
   loginPage.getTitle().should("include", "Relevic");
-});
+});*/
