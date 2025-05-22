@@ -28,10 +28,10 @@ require("@4tw/cypress-drag-drop");
 import "@4tw/cypress-drag-drop";
 import "cypress-file-upload";
 import { LoginPage } from "../e2e/pageObjects/loginPageObjects";
-import { Settings } from "../e2e/pageObjects/settingsPageObjects";
+
 
 const loginPage = new LoginPage();
-const settings = new Settings();
+
 
 const validEmail = Cypress.env("email");
 const validPass = Cypress.env("password");
@@ -48,24 +48,5 @@ Cypress.Commands.add("authenticateUser", () => {
       .then(() => {
         loginPage.getUrl().should("include", "features/campaigns");
       });
-  });
-});
-
-//Custom Command to upload file from local storage
-Cypress.Commands.add("uploadFile", (selector, filePath) => {
-  return cy.get(selector).attachFile(filePath);
-});
-
-// Custom command to change role for a member
-Cypress.Commands.add("changeRoleForMember", (email, newRole) => {
-  cy.contains("tr", email).within(() => {
-    settings.rolesDropDownMenu().should("be.visible").select(newRole);
-  });
-});
-
-//Custom command to delete a team member
-Cypress.Commands.add("deleteUserByEmail", (email) => {
-  cy.contains("tr", email).within(() => {
-    settings.deleteMemberBtn().should("be.visible").click();
   });
 });

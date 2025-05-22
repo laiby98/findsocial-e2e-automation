@@ -1,0 +1,20 @@
+Feature: FindSocial Dashboard Signup
+
+    Validate the signup functionality of FindSocial Dashboard
+
+    Scenario: Sign Page - smoke test
+        Scenario Outline: Validating the Sign up Page
+            Given I am on find social website
+            When I click on signup button
+            Then I am able to see the login page
+            Then I will click again on signup button
+            Then I should be able to see the sign up page
+            Then I will click on username placeholder and type username
+            Then I will click on email placeholder and type email
+            Then I will click on password placeholder and type password
+            When I could be able to click on continue button
+            Then I click on accept
+            Then I will be able to land on buy plan page
+
+        
+

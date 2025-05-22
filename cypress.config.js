@@ -16,7 +16,7 @@ module.exports = defineConfig({
   e2e: {
     specPattern: "cypress/e2e/integration/**/*.feature",
     setupNodeEvents,
-    baseUrl: "https://www.findsocial.io/",
+    baseUrl: "https://dev.findsocial.io/",
     chromeWebSecurity: false,
     experimentalModifyObstructiveThirdPartyCode: true,
     defaultCommandTimeout: 10000,
@@ -25,8 +25,14 @@ module.exports = defineConfig({
     viewportHeight: 1080,
     viewportWidth: 1920,
     env: {
-      username: "QA Automation Cypress",
-      email: "qa+3@relevic.com",
+      username: "test09",
+      password: "Laiba77@",
+      invalidUsername: "test@hmail.com",
+      invalidPassword: "Laiba88@",
+      newUser: "dummy03",
+      newEmail: "laibalg6117+13@gmail.com",
+      newPass: "Laiba77@",
     },
   },
 });
+

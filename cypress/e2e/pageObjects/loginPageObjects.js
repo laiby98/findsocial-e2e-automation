@@ -1,18 +1,36 @@
-
-const dashboard = "https://www.findsocial.io/";
 const login = "/";
-const emailPlaceholder = '[id="email"]';
-const passwordPlaceholder = '[id="password"]';
-const loginBtn = 'button[class="chakra-button css-lbsdsx"]';
-const errorMessage = "p.chakra-text.css-19gpx6";
-const googleSSOButton = "button[class='chakra-button css-14iurws']";
+const getLoginButton = `[class="btn-main mr-2 res-mobile-none"]`;
+const logo = '[id="prompt-logo-center"]';
+const username = '[id="username"]';
+const password = '[id="password"]';
+const continueButton = '[name="action"]';
+const validationMessage = '[class="ulp-input-error-message"]';
 
 class LoginPage {
+
   visit() {
-    cy.visit(login);
+    return cy.visit(login);
   }
-  /*getTitle() {
-    return cy.title();
-  }*/
+
+  getLoginButton() {
+    return cy.get(getLoginButton);
+  }
+
+  getusername() {
+    return cy.get(username);
+  }
+
+  getpassword() {
+    return cy.get(password);
+  }
+
+  getcontinueButton() {
+    return cy.get(continueButton);
+  }
+
+  getvalidationMessage(){
+    return cy.get(validationMessage);
+  }
+
 }
 export { LoginPage };
