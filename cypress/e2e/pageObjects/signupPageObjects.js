@@ -6,6 +6,7 @@ const email = '[id="email"]';
 const password = '[id="password"]';
 const contButton = '[name="action"]';
 const accept = '[value="accept"]';
+const validationMsg = '[class="c5edff0e0 cd4f7fa59"]';
 
 
 class Signup {
@@ -36,6 +37,10 @@ class Signup {
 
   getButton() {
     return cy.get(contButton);
+  }
+
+  getvalidationMsg() {
+    return cy.get(validationMsg);
   }
 
   getaccept() {
