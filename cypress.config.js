@@ -16,7 +16,7 @@ module.exports = defineConfig({
   e2e: {
     specPattern: "cypress/e2e/integration/**/*.feature",
     setupNodeEvents,
-    baseUrl: "https://dashboard.relevic.com/",
+    baseUrl: "https://dev.findsocial.io/",
     chromeWebSecurity: false,
     experimentalModifyObstructiveThirdPartyCode: true,
     defaultCommandTimeout: 10000,
@@ -25,8 +25,17 @@ module.exports = defineConfig({
     viewportHeight: 1080,
     viewportWidth: 1920,
     env: {
-      username: "QA Automation Cypress",
-      email: "qa+3@relevic.com",
+      username: "test09",
+      password: "Laiba77@",
+      invalidUsername: "test@hmail.com",
+      invalidPassword: "Laiba88@",
+      existUser: "dummy02",
+      existEmail: "laibalg6117+12@gmail.com",
+      existPass: "Laiba77@",
+      newUser: "dummy30",
+      newEmail: "laibalg6117+31@gmail.com",
+      newPass: "Laiba77@",
     },
   },
 });
+
