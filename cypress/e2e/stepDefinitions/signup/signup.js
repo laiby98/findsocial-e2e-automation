@@ -46,8 +46,9 @@ When("I could be able to click on continue button", () => {
   signUp.getButton().should("exist").click();
 });
 
-/* Then("I should see the validation message", () => {
+Then("I should see the validation message", () => {
   signUp.getvalidationMsg().should("exist");
+  cy.wait(2000);
 });
 
 //////// New user flow //////////
@@ -66,7 +67,7 @@ Then("I will click on password placeholder and type new password", () => {
 
 When("I could click on continue button", () => {
   signUp.getButton().should("exist").click();
-}); */
+});
 
 Then("I click on accept", () => {
   signUp.getaccept().should("exist").click();
@@ -74,4 +75,12 @@ Then("I click on accept", () => {
 
 Then("I will be able to land on buy plan page", () => {
   cy.url().should("include", "/subscription-plan");
+});
+
+Then("I will select free plan", () => {
+  signUp.getfreeplan().should("exist").click(); 
+}); 
+
+Then("I will land on homepage", () => {
+  cy.url().should("include", "/home");
 });
