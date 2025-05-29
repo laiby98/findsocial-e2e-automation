@@ -24,29 +24,32 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-require("@4tw/cypress-drag-drop");
-import "@4tw/cypress-drag-drop";
-import "cypress-file-upload";
 import { LoginPage } from "../e2e/pageObjects/loginPageObjects";
 
 
 const loginPage = new LoginPage();
 
 
-const validEmail = Cypress.env("email");
-const validPass = Cypress.env("password");
+const validEmail = Cypress.env("existEmail");
+const validPass = Cypress.env("existPass");
 
 //Custom command for authenticator hook
 Cypress.Commands.add("authenticateUser", () => {
-  loginPage.visit();
-  loginPage.getTitle().then(() => {
-    loginPage.emailPlaceholder().type(validEmail);
-    loginPage.passwordPlaceholder().type(validPass);
-    loginPage
-      .loginButton()
-      .click()
-      .then(() => {
-        loginPage.getUrl().should("include", "features/campaigns");
-      });
-  });
+   loginPage.visit("/");
+   loginPage.getLoginButton().click();
+   loginPage.getusername().click().clear().type(validEmail);
+   loginPage.getpassword().click().clear().type(validPass);
+   loginPage.getcontinueButton().click();
+   
+  // loginPage.visit();
+  // loginPage.getTitle().then(() => {
+  //   loginPage.emailPlaceholder().type(validEmail);
+  //   loginPage.passwordPlaceholder().type(validPass);
+  //   loginPage
+  //     .loginButton()
+  //     .click()
+  //     .then(() => {
+  //       loginPage.getUrl().should("include", "features/campaigns");
+  //     });
+  // });
 });
